@@ -47,33 +47,6 @@ python3 train_face_recognition.py
 使用收集到的人脸数据训练SVM模型，并保存为models/face_recognition_model.pkl
 
 
-### 启动仿真平台
-终端1 - 启动gazebo仿真环境
-```
-source /opt/ros/galactic/setup.bash
-source install/setup.bash
-ros2 launch cyberdog_gazebo gazebo.launch.py
-```
-
-终端2 - 启动控制程序
-```
-source /opt/ros/galactic/setup.bash
-source install/setup.bash
-ros2 launch cyberdog_gazebo cyberdog_control_launch.py
-```
-
-终端3 - 启动可视化界面
-```
-source /opt/ros/galactic/setup.bash
-source install/setup.bash
-ros2 launch cyberdog_visual cyberdog_visual.launch.py
-```
-
-### 运行人脸识别与机器狗控制
-```
-python3 src/face.py
-```
-
 ### 自定义人员动作
 修改face.py文件中的person_specific_action函数，为不同人员配置专属动作：
 以A同学 - 握手为例
@@ -135,6 +108,7 @@ python3 src/cyberdog_simulator/colortest2/face.py
 当摄像头检测到人脸后，程序会输出识别结果（姓名 + 置信度）。
 
 根据不同成员触发 Cyberdog 执行动作：
+
 A同学 → 握手
 
 B同学 → 太空步
