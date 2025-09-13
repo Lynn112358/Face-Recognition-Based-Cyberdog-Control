@@ -42,7 +42,7 @@ python3 src/face_data_collection.py
 
 训练人脸识别模型
 ```
-python3 train_face_recognition.py
+python3 src/face_trainer.py
 ```
 使用收集到的人脸数据训练SVM模型，并保存为models/face_recognition_model.pkl
 
@@ -66,7 +66,7 @@ def person_specific_action(ctrl, msg, person_name):
 
 ### 运行人脸识别与控制
 ```
-python3 src/cyberdog_simulator/colortest2/face.py
+python3 src/face.py
 ```
 
 ### 效果
@@ -102,7 +102,7 @@ rqt
 启动人脸识别与控制程序
 
 ```
-python3 src/cyberdog_simulator/colortest2/face.py
+python3 src/face.py
 ```
 
 当摄像头检测到人脸后，程序会输出识别结果（姓名 + 置信度）。
